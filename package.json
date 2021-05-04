@@ -1,18 +1,23 @@
 {
   "dependencies": {
+    "lite-server": "^2.6.1",
     "navigo": "^8.11.1"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.5",
-    "sass": "^1.32.12"
+    "sass": "^1.32.12",
+    "webpack": "^5.36.2",
+    "webpack-cli": "^4.6.0"
   },
   "name": "xmath",
   "description": "Website with mathematical topics",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "dev": "lite-server",
     "dev:css": "parcel watch front/scss/bundles/*.scss --no-hmr --public-url /css/ --out-dir public/css",
-    "build:css": "parcel build front/scss/*.scss --public-url /css/ --out-dir public/css"
+    "build:css": "parcel build front/scss/*.scss --public-url /css/ --out-dir public/css",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
