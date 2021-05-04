@@ -4,6 +4,7 @@
     "navigo": "^8.11.1"
   },
   "devDependencies": {
+    "concurrently": "^6.0.2",
     "gh-pages": "^3.1.0",
     "parcel-bundler": "^1.12.5",
     "sass": "^1.32.12",
@@ -15,10 +16,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "lite-server",
+    "dev": "npm run build:js & npm run server",
+    "server": "lite-server",
     "dev:css": "parcel watch front/scss/bundles/*.scss --no-hmr --public-url /css/ --out-dir public/css",
     "build:css": "parcel build front/scss/*.scss --public-url /css/ --out-dir public/css",
-    "build": "webpack",
+    "build:js": "webpack",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },

@@ -27,7 +27,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _rou
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"renderCombinationsPage\": () => (/* binding */ renderCombinationsPage)\n/* harmony export */ });\nfunction renderCombinationsPage() {\n    document.querySelector(\"#content\").innerHTML = `\n      <h1>Combinations</h1>\n    `;\n}\n\n\n//# sourceURL=webpack://xmath/./front/js/routes/combinations.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"renderCombinationsPage\": () => (/* binding */ renderCombinationsPage)\n/* harmony export */ });\nfunction renderCombinationsPage() {\n    document.querySelector(\"#content\").innerHTML = `\n      <h1>Combinations</h1>\n      <p>Combinations are selections of objects, with or without repetition, order does not matter.</p>\n    `;\n}\n\n\n//# sourceURL=webpack://xmath/./front/js/routes/combinations.js?");
 
 /***/ }),
 
@@ -49,7 +49,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"renderPermutationsPage\": () => (/* binding */ renderPermutationsPage)\n/* harmony export */ });\nfunction renderPermutationsPage() {\n    document.querySelector(\"#content\").innerHTML = `\n      <h1>Permutations</h1>\n    `;\n}\n\n//# sourceURL=webpack://xmath/./front/js/routes/permutations.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"renderPermutationsPage\": () => (/* binding */ renderPermutationsPage)\n/* harmony export */ });\nfunction renderPermutationsPage() {\n    document.querySelector(\"#content\").innerHTML = `\n      <h1>Permutations</h1>\n      <p>Permutations are arrangements of objects (with or without repetition), order does matter.</p>\n    `;\n}\n\n//# sourceURL=webpack://xmath/./front/js/routes/permutations.js?");
 
 /***/ }),
 
@@ -60,7 +60,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"renderVariationsPage\": () => (/* binding */ renderVariationsPage)\n/* harmony export */ });\nfunction renderVariationsPage() {\n    document.querySelector(\"#content\").innerHTML = `\n      <h1>Variations</h1>\n    `;\n}\n\n//# sourceURL=webpack://xmath/./front/js/routes/variations.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"renderVariationsPage\": () => (/* binding */ renderVariationsPage)\n/* harmony export */ });\nfunction renderVariationsPage() {\n    document.querySelector(\"#content\").innerHTML = `\n      <h1>Variations</h1>\n      <p>Variations are arrangements of selections of objects, where the order of the selected objects matters.</p>\n      <p>To count k-element variations of n objects, we first need to choose a k-element combination and then a permutation of the selected objects.</p>\n    `;\n}\n\n//# sourceURL=webpack://xmath/./front/js/routes/variations.js?");
 
 /***/ }),
 
