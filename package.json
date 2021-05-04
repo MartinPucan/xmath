@@ -4,6 +4,7 @@
     "navigo": "^8.11.1"
   },
   "devDependencies": {
+    "gh-pages": "^3.1.0",
     "parcel-bundler": "^1.12.5",
     "sass": "^1.32.12",
     "webpack": "^5.36.2",
@@ -17,7 +18,9 @@
     "dev": "lite-server",
     "dev:css": "parcel watch front/scss/bundles/*.scss --no-hmr --public-url /css/ --out-dir public/css",
     "build:css": "parcel build front/scss/*.scss --public-url /css/ --out-dir public/css",
-    "build": "webpack"
+    "build": "webpack",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -28,5 +31,5 @@
   "bugs": {
     "url": "https://github.com/MartinPucan/xmath/issues"
   },
-  "homepage": "https://github.com/MartinPucan/xmath#readme"
+  "homepage": "https://MartinPucan.github.io/xmath"
 }
