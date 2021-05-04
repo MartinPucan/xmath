@@ -1,5 +1,27 @@
 {
   "dependencies": {
     "navigo": "^8.11.1"
-  }
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.32.12"
+  },
+  "name": "xmath",
+  "description": "Website with mathematical topics",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev:css": "parcel watch front/scss/bundles/*.scss --no-hmr --public-url /css/ --out-dir public/css",
+    "build:css": "parcel build front/scss/*.scss --public-url /css/ --out-dir public/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MartinPucan/xmath.git"
+  },
+  "author": "MartinPucan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MartinPucan/xmath/issues"
+  },
+  "homepage": "https://github.com/MartinPucan/xmath#readme"
 }
