@@ -9,13 +9,58 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./front/js/index.js":
-/*!***************************!*\
+/***/ "./front/js/router.js":
+/*!****************************!*\
   !*** ./front/js/router.js ***!
-  \***************************/
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("const Navigo = __webpack_require__(/*! navigo */ \"./node_modules/navigo/lib/navigo.min.js\");\nwindow.addEventListener(\"load\", () => {\n\nconst router = new Navigo(\"/\", { linksSelector: \"a\" });\n\nconst render = (content) =>\n    (document.querySelector(\"#content\").innerHTML = content);\n\nrouter.on(\"/combinations\", (match) => {\n        console.log(match);\n        render(\"About\");\n    })\n    .on(\"/permutations\", (match) => {\n        console.log(match);\n        render(\"Permutations \" + JSON.stringify(match.params));\n    })\n    .on(\"/variations\", (match) => {\n        console.log(match);\n        render(\"Variations\");\n    })\n    .on((match) => {\n        console.log(match);\n        render(\"Welcome home\");\n    })\n    .resolve();\n});\n\n//# sourceURL=webpack://xmath/./front/js/router.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _routes_homepage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./routes/homepage */ \"./front/js/routes/homepage.js\");\n/* harmony import */ var _routes_combinations_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./routes/combinations.js */ \"./front/js/routes/combinations.js\");\n/* harmony import */ var _routes_variations_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./routes/variations.js */ \"./front/js/routes/variations.js\");\n/* harmony import */ var _routes_permutations_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./routes/permutations.js */ \"./front/js/routes/permutations.js\");\nconst Navigo = __webpack_require__(/*! navigo */ \"./node_modules/navigo/lib/navigo.min.js\");\n\n\n\n\n\n\nconst router = new Navigo(\"/\");\n\nwindow.addEventListener(\"load\", () => {\n    router\n        .on(\"/combinations\", _routes_combinations_js__WEBPACK_IMPORTED_MODULE_1__.renderCombinationsPage)\n        .on(\"/variations\", _routes_variations_js__WEBPACK_IMPORTED_MODULE_2__.renderVariationsPage)\n        .on(\"/permutations\", _routes_permutations_js__WEBPACK_IMPORTED_MODULE_3__.renderPermutationsPage)\n        .on(\"*\", _routes_homepage__WEBPACK_IMPORTED_MODULE_0__.renderHomePage)\n        .resolve();\n})\n\n\n//# sourceURL=webpack://xmath/./front/js/router.js?");
+
+/***/ }),
+
+/***/ "./front/js/routes/combinations.js":
+/*!*****************************************!*\
+  !*** ./front/js/routes/combinations.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"renderCombinationsPage\": () => (/* binding */ renderCombinationsPage)\n/* harmony export */ });\nfunction renderCombinationsPage() {\n    document.querySelector(\"#content\").innerHTML = `\n      <h1>Combinations</h1>\n    `;\n}\n\n\n//# sourceURL=webpack://xmath/./front/js/routes/combinations.js?");
+
+/***/ }),
+
+/***/ "./front/js/routes/homepage.js":
+/*!*************************************!*\
+  !*** ./front/js/routes/homepage.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"renderHomePage\": () => (/* binding */ renderHomePage)\n/* harmony export */ });\nfunction renderHomePage() {\n    document.querySelector(\"#content\").innerHTML = `\n      <h1>Homepage</h1>\n    `;\n}\n\n//# sourceURL=webpack://xmath/./front/js/routes/homepage.js?");
+
+/***/ }),
+
+/***/ "./front/js/routes/permutations.js":
+/*!*****************************************!*\
+  !*** ./front/js/routes/permutations.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"renderPermutationsPage\": () => (/* binding */ renderPermutationsPage)\n/* harmony export */ });\nfunction renderPermutationsPage() {\n    document.querySelector(\"#content\").innerHTML = `\n      <h1>Permutations</h1>\n    `;\n}\n\n//# sourceURL=webpack://xmath/./front/js/routes/permutations.js?");
+
+/***/ }),
+
+/***/ "./front/js/routes/variations.js":
+/*!***************************************!*\
+  !*** ./front/js/routes/variations.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"renderVariationsPage\": () => (/* binding */ renderVariationsPage)\n/* harmony export */ });\nfunction renderVariationsPage() {\n    document.querySelector(\"#content\").innerHTML = `\n      <h1>Variations</h1>\n    `;\n}\n\n//# sourceURL=webpack://xmath/./front/js/routes/variations.js?");
 
 /***/ }),
 
@@ -56,11 +101,40 @@ eval("!function(t,n){ true?module.exports=n():0}(\"undefined\"!=typeof self?self
 /******/ 	}
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/************************************************************************/
 /******/ 	
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./front/js/index.js");
+/******/ 	var __webpack_exports__ = __webpack_require__("./front/js/router.js");
 /******/ 	
 /******/ })()
 ;

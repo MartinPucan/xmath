@@ -1,8 +1,8 @@
 module.exports = {
-  entry: `${__dirname}/front/js/index.js`,
+  entry: `${__dirname}/front/js/router.js`,
   mode: 'development',
   output: {
     path: `${__dirname}/public/js/`,
-    filename: 'index.js',
+    filename: 'router.js',
   },
 };

@@ -6,15 +6,20 @@
     <link rel="stylesheet" href="public/css/index.css">
 </head>
 <body>
-    <header>
-        <nav class="header">
-            <a href="/about" data-navigo>Contacts</a>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-item">
+                <a href="/combinations" data-navigo>Combinations</a>
+            </div>
+            <div class="nav-item">
+                <a href="/permutations" data-navigo>Permutations</a>
+            </div>
+            <div class="nav-item">
+                <a href="/variations" data-navigo>Variations</a>
+            </div>
         </nav>
     </header>
-    <hr>
-    <section class="container">
-        <div></div>
-    </section>
-    <script src="./public/js/index.js"></script>
+    <section id="content" class="container"></section>
+    <script src="./public/js/router.js"></script>
 </body>
 </html>
