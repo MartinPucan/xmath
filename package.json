@@ -1,7 +1,8 @@
 {
   "dependencies": {
     "lite-server": "^2.6.1",
-    "navigo": "^8.11.1"
+    "navigo": "^8.11.1",
+    "validator": "^13.6.0"
   },
   "devDependencies": {
     "concurrently": "^6.0.2",
@@ -18,9 +19,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "npm run build:js & npm run server",
+    "dev": "npm run server",
     "server": "lite-server",
     "dev:css": "parcel watch front/scss/bundles/*.scss --no-hmr --public-url /css/ --out-dir public/css",
+    "dev:js": "webpack --watch",
     "build:css": "parcel build front/scss/*.scss --public-url /css/ --out-dir public/css",
     "build:js": "webpack",
     "predeploy": "npm run build",

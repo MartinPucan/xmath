@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _par
   \**********************************/
 /***/ (() => {
 
-eval("window.addEventListener('load', () => {\n    const navMenu = document.querySelector('.nav-menu')\n    const navIco = document.querySelector('.nav-icon')\n    const icoState = document.querySelector('.nav-ico-state')\n\n    function showNavMenu() {\n        navMenu.classList.toggle(\"showPanel\")\n    }\n\n    navIco.addEventListener(\"click\", showNavMenu)\n\n    function checkToggleIntegrations(e) {\n        const itemClicked = e.target\n        if (itemClicked.classList.contains(\"menuLink\")) {\n            showNavMenu()\n        }\n    }\n\n    navMenu.addEventListener(\"click\", checkToggleIntegrations)\n})\n\n//# sourceURL=webpack://xmath/./front/js/partials/nav.js?");
+eval("window.addEventListener('load', () => {\n    const navMenu = document.querySelector('.nav-menu')\n    const navIco = document.querySelector('.nav-icon')\n    const icoState = document.querySelector('.nav-ico-state')\n    console.log(\"zmrde\")\n\n    function showNavMenu() {\n        if (navMenu.classList.contains('js-show-nav')) {\n            navMenu.classList.remove('js-show-nav')\n            icoState.classList.replace('fa-times', 'fa-bars')\n        } else {\n            navMenu.classList.add('js-show-nav')\n            icoState.classList.replace('fa-bars', 'fa-times')\n        }\n    }\n\n    navIco.addEventListener(\"click\", showNavMenu)\n})\n\n//# sourceURL=webpack://xmath/./front/js/partials/nav.js?");
 
 /***/ }),
 
