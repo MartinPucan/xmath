@@ -9,6 +9,27 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./front/js/index.js":
+/*!***************************!*\
+  !*** ./front/js/index.js ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _partials_nav__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./partials/nav */ \"./front/js/partials/nav.js\");\n/* harmony import */ var _partials_nav__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_partials_nav__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./router */ \"./front/js/router.js\");\n\n\n\n//# sourceURL=webpack://xmath/./front/js/index.js?");
+
+/***/ }),
+
+/***/ "./front/js/partials/nav.js":
+/*!**********************************!*\
+  !*** ./front/js/partials/nav.js ***!
+  \**********************************/
+/***/ (() => {
+
+eval("window.addEventListener('load', () => {\n    const navMenu = document.querySelector('.nav-menu')\n    const navIco = document.querySelector('.nav-icon')\n    const icoState = document.querySelector('.nav-ico-state')\n\n    function showNavMenu() {\n        navMenu.classList.toggle(\"showPanel\")\n    }\n\n    navIco.addEventListener(\"click\", showNavMenu)\n\n    function checkToggleIntegrations(e) {\n        const itemClicked = e.target\n        if (itemClicked.classList.contains(\"menuLink\")) {\n            showNavMenu()\n        }\n    }\n\n    navMenu.addEventListener(\"click\", checkToggleIntegrations)\n})\n\n//# sourceURL=webpack://xmath/./front/js/partials/nav.js?");
+
+/***/ }),
+
 /***/ "./front/js/router.js":
 /*!****************************!*\
   !*** ./front/js/router.js ***!
@@ -16,7 +37,7 @@
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _routes_homepage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./routes/homepage */ \"./front/js/routes/homepage.js\");\n/* harmony import */ var _routes_combinations_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./routes/combinations.js */ \"./front/js/routes/combinations.js\");\n/* harmony import */ var _routes_variations_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./routes/variations.js */ \"./front/js/routes/variations.js\");\n/* harmony import */ var _routes_permutations_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./routes/permutations.js */ \"./front/js/routes/permutations.js\");\nconst Navigo = __webpack_require__(/*! navigo */ \"./node_modules/navigo/lib/navigo.min.js\");\n\n\n\n\n\n\nconst router = new Navigo(\"/\");\n\nwindow.addEventListener(\"load\", () => {\n    router\n        .on(\"/combinations\", _routes_combinations_js__WEBPACK_IMPORTED_MODULE_1__.renderCombinationsPage)\n        .on(\"/variations\", _routes_variations_js__WEBPACK_IMPORTED_MODULE_2__.renderVariationsPage)\n        .on(\"/permutations\", _routes_permutations_js__WEBPACK_IMPORTED_MODULE_3__.renderPermutationsPage)\n        .on(\"*\", _routes_homepage__WEBPACK_IMPORTED_MODULE_0__.renderHomePage)\n        .resolve();\n})\n\n\n//# sourceURL=webpack://xmath/./front/js/router.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _routes_homepage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./routes/homepage */ \"./front/js/routes/homepage.js\");\n/* harmony import */ var _routes_combinations__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./routes/combinations */ \"./front/js/routes/combinations.js\");\n/* harmony import */ var _routes_variations__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./routes/variations */ \"./front/js/routes/variations.js\");\n/* harmony import */ var _routes_permutations__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./routes/permutations */ \"./front/js/routes/permutations.js\");\nvar Navigo = __webpack_require__(/*! navigo */ \"./node_modules/navigo/lib/navigo.min.js\");\n\n\n\n\n\n\nconst router = new Navigo(\"/\");\n\nwindow.addEventListener(\"load\", () => {\n    router\n        .on('/combinations', _routes_combinations__WEBPACK_IMPORTED_MODULE_1__.renderCombinationsPage)\n        .on('/variations', _routes_variations__WEBPACK_IMPORTED_MODULE_2__.renderVariationsPage)\n        .on('/permutations', _routes_permutations__WEBPACK_IMPORTED_MODULE_3__.renderPermutationsPage)\n        .on('*', _routes_homepage__WEBPACK_IMPORTED_MODULE_0__.renderHomePage)\n        .resolve();\n})\n\n\n//# sourceURL=webpack://xmath/./front/js/router.js?");
 
 /***/ }),
 
@@ -27,7 +48,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _rou
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"renderCombinationsPage\": () => (/* binding */ renderCombinationsPage)\n/* harmony export */ });\nfunction renderCombinationsPage() {\n    document.querySelector(\"#content\").innerHTML = `\n      <h1>Combinations</h1>\n      <p>Combinations are selections of objects, with or without repetition, order does not matter.</p>\n    `;\n}\n\n\n//# sourceURL=webpack://xmath/./front/js/routes/combinations.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"renderCombinationsPage\": () => (/* binding */ renderCombinationsPage)\n/* harmony export */ });\nfunction renderCombinationsPage() {\n    document.querySelector(\"#content\").innerHTML = `\n      <h1>Combinations</h1>\n      <p>Combinations are selections of objects, with or without repetition, order does not matter.</p>\n      <div>\n        \n      </div>\n    `;\n}\n\n\n//# sourceURL=webpack://xmath/./front/js/routes/combinations.js?");
 
 /***/ }),
 
@@ -101,6 +122,18 @@ eval("!function(t,n){ true?module.exports=n():0}(\"undefined\"!=typeof self?self
 /******/ 	}
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
@@ -134,7 +167,7 @@ eval("!function(t,n){ true?module.exports=n():0}(\"undefined\"!=typeof self?self
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./front/js/router.js");
+/******/ 	var __webpack_exports__ = __webpack_require__("./front/js/index.js");
 /******/ 	
 /******/ })()
 ;
