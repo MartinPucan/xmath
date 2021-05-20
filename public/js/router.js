@@ -48,7 +48,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _rou
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"renderCombinationsPage\": () => (/* binding */ renderCombinationsPage)\n/* harmony export */ });\nfunction renderCombinationsPage() {\n    document.querySelector(\"#content\").innerHTML = `\n      <h1>Combinations</h1>\n      <p>Combinations are selections of objects, with or without repetition, order does not matter.</p>\n      <div>\n        \n      </div>\n    `;\n}\n\n\n//# sourceURL=webpack://xmath/./front/js/routes/combinations.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"renderCombinationsPage\": () => (/* binding */ renderCombinationsPage)\n/* harmony export */ });\nfunction renderCombinationsPage() {\n    document.querySelector(\"#content\").innerHTML = `\n      <h1>Combinations</h1>\n      <p>Combinations are selections of objects, with or without repetition, order does not matter.</p>\n      <div id=\"test\">\n        <button id=\"button1\">0</button>\n        <button id=\"button2\">2</button>\n      </div>\n    `;\n}\n\n\n//# sourceURL=webpack://xmath/./front/js/routes/combinations.js?");
 
 /***/ }),
 
